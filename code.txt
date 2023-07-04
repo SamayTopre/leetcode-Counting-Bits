@@ -1,0 +1,23 @@
+class Solution {
+public:
+    vector<int> countBits(int n) {
+        vector<int>v;
+int r,q,count=0;
+        for(int i=0;i<n+1;i++)
+        {
+            q=i;
+            while(q!=0)
+            {
+                r=q%2;
+                if(r==1)
+                {
+count++;
+                }
+                q=q/2;
+            }
+            v.push_back(count);
+            count=0;
+        }
+      return v;  
+    }
+};
